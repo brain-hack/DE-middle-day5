@@ -1,0 +1,11 @@
+FROM demiddleday3_jupyter:latest
+
+MAINTAINER yoon, koock <deep-learning@kakao.com>
+
+COPY ./ /jupyter4
+
+WORKDIR /jupyter4
+
+EXPOSE 8886
+
+ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8886 --no-browser

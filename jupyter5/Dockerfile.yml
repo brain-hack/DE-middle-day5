@@ -1,0 +1,11 @@
+FROM demiddleday3_jupyter:latest
+
+MAINTAINER yoon, koock <deep-learning@kakao.com>
+
+COPY ./ /jupyter5
+
+WORKDIR /jupyter5
+
+EXPOSE 8887
+
+ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8887 --no-browser
